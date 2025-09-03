@@ -2,17 +2,14 @@ const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Home route
 app.get("/", (req, res) => {
-  res.send("🚀 Zop na mggg");
+  res.send(`
+    <h1>🚀 Hello from Node.js</h1>
+    <p>Here’s an image from the internet:</p>
+    <img src=https://media.tenor.com/6MTrgk8yCIgAAAAj/clone-shaktimaan.gif"/>
+  `);
 });
 
-// About route
-app.get("/about", (req, res) => {
-  res.send("This is a simple Node.js app with Express.");
-});
-
-// Start server
-app.listen(PORT, () => {
-  console.log(`✅ Server running at http://localhost:${PORT}`);
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`✅ Server running at http://0.0.0.0:${PORT}`);
 });

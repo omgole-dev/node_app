@@ -4,7 +4,7 @@ const PORT = process.env.PORT || 3000;
 
 // Home route
 app.get("/", (req, res) => {
-  res.send("🚀 Hello! Your Node.js app is running.");
+  res.send("🚀 Zop na mggg");
 });
 
 // About route
